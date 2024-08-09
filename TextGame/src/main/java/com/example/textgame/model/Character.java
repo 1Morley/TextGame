@@ -11,12 +11,12 @@ import java.util.ArrayList;
 public class Character {
     private String name;
     private int health;
-    private ArrayList inventory;
+    private ArrayList<Item> inventory;
 
     public Character(String name) {
         setName(name);
         setHealth(100);
-        setInventory(new ArrayList<String>());
+        setInventory(new ArrayList<Item>());
     }
 
 
@@ -24,15 +24,21 @@ public class Character {
         setHealth(getHealth() + amount);
     }
 
-
+    public void useItemOnSelfFromInventory(int itemIndex){
+        Item select = (Item) getInventory().get(itemIndex);
+        if(select instanceof StatItem){
+            ((StatItem) select).useItemOnCharacter(this);
+            getInventory().remove(itemIndex);
+        }
+    }
 
     public String getName() {
         return name;
     }
 
     private void setName(String name) {
-        if(name.isEmpty() || name.length() < 1){
-            throw new NullPointerException("NAME CANNOT BE EMPTY");
+        if(name == null || name.isEmpty()){
+            throw new NullPointerException("CHARACTER NAME CANNOT BE EMPTY");
         }
         this.name = name;
     }
