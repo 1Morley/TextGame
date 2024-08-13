@@ -4,7 +4,7 @@
  * @projectName TextGame
  * @packageName com.example.textgame.controller;
  */
-package com.example.textgame.controller;
+package com.example.textgame;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -19,7 +19,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("view/Gui.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("Gui.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("Text Game");
         stage.setScene(scene);

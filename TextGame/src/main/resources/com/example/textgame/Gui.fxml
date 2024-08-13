@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" prefHeight="400.0" prefWidth="600.0">
+   <TextArea fx:id="textBox" layoutX="14.0" layoutY="14.0" prefHeight="300.0" prefWidth="572.0" style="-fx-font-family: 'Comic Sans MS';" />
+   <Button fx:id="useButton" layoutX="14.0" layoutY="330.0" mnemonicParsing="false" text="Use" style="-fx-font-family: 'Comic Sans MS';" />
+   <Button fx:id="inventoryButton" layoutX="94.0" layoutY="330.0" mnemonicParsing="false" text="Inventory" style="-fx-font-family: 'Comic Sans MS';" />
+   <Button fx:id="moveButton" layoutX="204.0" layoutY="330.0" mnemonicParsing="false" text="Move" style="-fx-font-family: 'Comic Sans MS';" />
+   <Button fx:id="talkButton" layoutX="304.0" layoutY="330.0" mnemonicParsing="false" text="Talk" style="-fx-font-family: 'Comic Sans MS';" />
+   <Button fx:id="examineButton" layoutX="384.0" layoutY="330.0" mnemonicParsing="false" text="Examine" style="-fx-font-family: 'Comic Sans MS';" />
+</AnchorPane>
