@@ -18,12 +18,16 @@ public class StatItem extends Item{
         input.addToHealth(getHealthStat());
     }
 
-
     public int getHealthStat() {
         return healthStat;
     }
 
     private void setHealthStat(int healthStat) {
         this.healthStat = healthStat;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n health: " + getHealthStat();
     }
 }

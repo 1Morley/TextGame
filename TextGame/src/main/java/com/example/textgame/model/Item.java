@@ -36,4 +36,8 @@ public class Item {
         }
         this.description = description;
     }
+    @Override
+    public String toString() {
+        return getName() + "\n" + getDescription();
+    }
 }

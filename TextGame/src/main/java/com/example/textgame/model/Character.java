@@ -9,29 +9,50 @@ package com.example.textgame.model;
 import java.util.ArrayList;
 
 public class Character {
+    private static final int MAX_HEALTH = 100;
     private String name;
     private int health;
     private ArrayList<Item> inventory;
 
     public Character(String name) {
         setName(name);
-        setHealth(100);
-        setInventory(new ArrayList<Item>());
+        setHealth(MAX_HEALTH);
+        inventory = new ArrayList<>();
     }
-
 
     public void addToHealth(int amount){
         setHealth(getHealth() + amount);
     }
 
+    public void addItemToInventory(Item addedItem){
+        inventory.add(addedItem);
+    }
+
     public void useItemOnSelfFromInventory(int itemIndex){
-        Item select = (Item) getInventory().get(itemIndex);
+        Item select = inventory.get(itemIndex);
         if(select instanceof StatItem){
             ((StatItem) select).useItemOnCharacter(this);
-            getInventory().remove(itemIndex);
+            deleteItemFromInventory(itemIndex);
         }
     }
 
+    private void deleteItemFromInventory(int itemIndex){
+        inventory.remove(itemIndex);
+    }
+
+    public String[] returnItemNameList(){
+        String[] returnList = new String[inventory.size()];
+        for (int i = 0; i < inventory.size(); i++) {
+            returnList[i] = inventory.get(i).getName();
+        }
+        return returnList;
+    }
+
+    public String getFullItemInfo(int itemIndex){
+        return inventory.get(itemIndex).toString();
+    }
+
+    //region getters and setters
     public String getName() {
         return name;
     }
@@ -48,14 +69,12 @@ public class Character {
     }
 
     private void setHealth(int health) {
+        if(health < 0){
+            health = 0;
+        }else if(health > MAX_HEALTH){
+            health = MAX_HEALTH;
+        }
         this.health = health;
     }
-
-    private ArrayList getInventory() {
-        return inventory;
-    }
-
-    private void setInventory(ArrayList inventory) {
-        this.inventory = inventory;
-    }
+    //endregion
 }
