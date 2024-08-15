@@ -1,5 +1,8 @@
 package com.example.textgame.controller;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+
 /**
  * @author cwatson
  * @createdOn 8/7/2024 at 6:33 PM
@@ -8,5 +11,5 @@ package com.example.textgame.controller;
  */
 
 public class GuiController {
-
+@FXML Button inventoryButton;
 }
