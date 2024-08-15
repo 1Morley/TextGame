@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textgame.controller.GuiController">
    <TextArea fx:id="textBox" layoutX="14.0" layoutY="14.0" prefHeight="300.0" prefWidth="572.0" style="-fx-font-family: 'Comic Sans MS';" />
-   <Button fx:id="useButton" layoutX="14.0" layoutY="330.0" text="Use" style="-fx-font-family: 'Comic Sans MS';" />
-   <Button fx:id="inventoryButton" layoutX="94.0" layoutY="330.0"  text="Inventory" style="-fx-font-family: 'Comic Sans MS';" />
-   <Button fx:id="moveButton" layoutX="204.0" layoutY="330.0"  text="Move" style="-fx-font-family: 'Comic Sans MS';" />
-   <Button fx:id="talkButton" layoutX="304.0" layoutY="330.0" text="Talk" style="-fx-font-family: 'Comic Sans MS';" />
-   <Button fx:id="examineButton" layoutX="384.0" layoutY="330.0"  text="Examine" style="-fx-font-family: 'Comic Sans MS';" />
+   <Button fx:id="useButton" layoutX="14.0" layoutY="330.0" onAction="#buttonClick" style="-fx-font-family: 'Comic Sans MS';" text="Use" />
+   <Button fx:id="inventoryButton" layoutX="94.0" layoutY="330.0" onAction="#buttonClick" style="-fx-font-family: 'Comic Sans MS';" text="Inventory" />
+   <Button fx:id="moveButton" layoutX="204.0" layoutY="330.0" onAction="#buttonClick" style="-fx-font-family: 'Comic Sans MS';" text="Move" />
+   <Button fx:id="talkButton" layoutX="304.0" layoutY="330.0" onAction="#buttonClick" style="-fx-font-family: 'Comic Sans MS';" text="Talk" />
+   <Button fx:id="examineButton" layoutX="384.0" layoutY="330.0" onAction="#buttonClick" style="-fx-font-family: 'Comic Sans MS';" text="Examine" />
 </AnchorPane>

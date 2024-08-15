@@ -11,7 +11,7 @@ public class Sound {
         playSound("buttonSd.mp3");
     }
     private static void playSound(String filename) {
-        URL resource = Sound.class.getResource("/org/example/textgame/" + filename);
+        URL resource = Sound.class.getResource("/com/example/textgame/" + filename);
         Media sound = new Media(resource.toString());
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();

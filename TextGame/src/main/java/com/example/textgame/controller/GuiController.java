@@ -1,5 +1,6 @@
 package com.example.textgame.controller;
 
+import com.example.textgame.controller.Design.Sound;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
@@ -11,5 +12,10 @@ import javafx.scene.control.Button;
  */
 
 public class GuiController {
-@FXML Button inventoryButton;
+
+
+@FXML protected void buttonClick(){
+    System.out.println("I was clicked!");
+    new Sound().clickButton(); //Testing
+}
 }
