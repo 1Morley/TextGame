@@ -8,4 +8,5 @@ package com.example.textgame.controller;
  */
 
 public class GuiController {
+
 }
