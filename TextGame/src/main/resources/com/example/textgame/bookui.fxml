@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textgame.controller.bookcontroller">
+   <children>
+      <ImageView fitHeight="339.0" fitWidth="652.0" layoutX="47.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="47.0" AnchorPane.topAnchor="31.0">
+         <image>
+            <Image url="@Openbookbig.png" />
+         </image>
+      </ImageView>
+
+      <Button layoutX="380.0" layoutY="296.0" mnemonicParsing="false" onAction="#onAction" prefHeight="49.0" prefWidth="44.0" style="-fx-background-color: transparent; -fx-padding: 0; -fx-border-color: transparent;" />
+
+      <Button layoutX="310.0" layoutY="297.0" mnemonicParsing="false" onAction="#onAction" prefHeight="49.0" prefWidth="51.0" style="-fx-background-color: transparent; -fx-padding: 0; -fx-border-color: transparent;" />
+
+      <Button layoutX="441.0" layoutY="301.0" mnemonicParsing="false" onAction="#onAction" prefHeight="43.0" prefWidth="44.0" style="-fx-background-color: transparent; -fx-padding: 0; -fx-border-color: transparent;" />
+
+      <TextField layoutX="129.0" layoutY="297.0" promptText="commands.." />
+      <ImageView fitHeight="60.0" fitWidth="70.0" layoutX="432.0" layoutY="291.0" preserveRatio="true">
+         <image>
+            <Image url="@mainFloorButton.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="70.0" layoutX="371.0" layoutY="293.0" preserveRatio="true">
+         <image>
+            <Image url="@basmentBtn.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="70.0" layoutX="310.0" layoutY="291.0" preserveRatio="true">
+         <image>
+            <Image url="@upstairsBtn.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
