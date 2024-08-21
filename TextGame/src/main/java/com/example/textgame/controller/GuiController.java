@@ -5,6 +5,7 @@ import com.example.textgame.LoadRoom;
 import com.example.textgame.controller.Design.Sound;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -26,30 +27,29 @@ import java.util.HashMap;
 public class GuiController {
     @FXML
     Label Entry1, Entry2, Entry3, description, roomName;
-    ArrayList<HashMap> currentRoom =  new ArrayList<>();
     HashMap hashMap = new HashMap();
     @FXML
     private void initialize() {
-        LoadData data = new LoadData();
-        hashMap = data.Data(new File("check.txt"));
         setUp(new LoadRoom().frontDoor());
-        HideText();
-        showDescription();
+//        HideText();
+//        showDescription();
     }
 
     @FXML
-    private void move(){
-        setUp(new LoadRoom().house());
+    private void moveUp(){
+        setUp(new LoadRoom().upstairs());
+    }
+    @FXML
+    private void moveAhead(){
+        setUp(new LoadRoom().mainFloor());
+    }
+    @FXML
+    private void moveDown(){
+        setUp(new LoadRoom().basement());
     }
     public void setUp(HashMap create){
-        roomName.setText((String) create.get("Name"));
+        roomName.setText("Current Room: " + (String) create.get("Name"));
         description.setText((String) create.get("Description"));
-        //can also put image and items in here too
-    }
-
-
-    public void buttonClick(){
-
     }
     public void HideText(){
         Entry1.setVisible(false);
@@ -67,6 +67,4 @@ public class GuiController {
     public void showDescription(){
         description.setVisible(true);
     }
-
-
 }
