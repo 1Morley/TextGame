@@ -32,14 +32,14 @@ public class GuiController {
     private void initialize() {
         LoadData data = new LoadData();
         hashMap = data.Data(new File("check.txt"));
-        setUp(new LoadRoom().room());
+        setUp(new LoadRoom().frontDoor());
         HideText();
         showDescription();
     }
 
     @FXML
     private void move(){
-        setUp(new LoadRoom().House());
+        setUp(new LoadRoom().house());
     }
     public void setUp(HashMap create){
         roomName.setText((String) create.get("Name"));
