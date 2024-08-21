@@ -12,7 +12,7 @@
          </image>
       </ImageView>
 
-      <TextField layoutX="129.0" layoutY="297.0" promptText="commands.." />
+      <TextField layoutX="129.0" layoutY="297.0" promptText="commands.." style="-fx-font-family: monospaced;" />
       <ImageView fitHeight="60.0" fitWidth="70.0" layoutX="432.0" layoutY="291.0" onMouseClicked="#moveAhead" preserveRatio="true">
          <image>
             <Image url="@mainFloorButton.png" />
