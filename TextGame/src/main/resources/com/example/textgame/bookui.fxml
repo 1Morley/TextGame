@@ -28,7 +28,7 @@
             <Image url="@upstairsBtn.png" />
          </image>
       </ImageView>
-      <Label fx:id="roomName" layoutX="115.0" layoutY="58.0" text="Label" />
-      <Label fx:id="description" layoutX="115.0" layoutY="158.0" text="Label" />
+      <Label fx:id="roomName" layoutX="152.0" layoutY="46.0" prefHeight="5.0" prefWidth="61.0" style="-fx-font-family: Monospaced;" text="room" />
+      <Label fx:id="description" layoutX="117.0" layoutY="63.0" prefHeight="168.0" prefWidth="174.0" style="-fx-font-family: Monospaced;" text="description" />
    </children>
 </AnchorPane>
