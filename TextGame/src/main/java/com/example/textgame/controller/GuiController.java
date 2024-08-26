@@ -43,16 +43,20 @@ public class GuiController {
 
     @FXML
     private void moveUp(){
+        Sound.clickButton();
         setUp(new LoadRoom().upstairs());
     }
     @FXML
     private void moveAhead(){
+        Sound.clickButton();
         setUp(new LoadRoom().mainFloor());
     }
     @FXML
     private void moveDown(){
+        Sound.clickButton();
         setUp(new LoadRoom().basement());
     }
+
     public void setUp(HashMap create){
         roomName.setText("Current Room: " + (String) create.get("Name"));
         description.setText((String) create.get("Description"));

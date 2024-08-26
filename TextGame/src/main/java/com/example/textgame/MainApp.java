@@ -6,6 +6,7 @@
  */
 package com.example.textgame;
 
+import com.example.textgame.controller.Design.Sound;
 import com.example.textgame.controller.GuiController;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -24,7 +25,9 @@ public class MainApp extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("Text Game");
         stage.setScene(scene);
+        Sound.playBackgroundMusic();
         stage.setOnCloseRequest((WindowEvent event) -> {
+            Sound.stopLoopingMusic();
             Platform.exit();
             System.exit(0);
         });
