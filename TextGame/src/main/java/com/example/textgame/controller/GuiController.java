@@ -43,22 +43,31 @@ public class GuiController {
 
     @FXML
     private void moveUp(){
+        //UpstairsBtn
         Sound.clickButton();
         setUp(new LoadRoom().upstairs());
     }
     @FXML
     private void moveAhead(){
+        //moveAheadBtn
         Sound.clickButton();
         setUp(new LoadRoom().mainFloor());
     }
     @FXML
     private void moveDown(){
+        //BasementBtn
         Sound.clickButton();
         setUp(new LoadRoom().basement());
     }
 
     @FXML protected void onTyping(){
         Sound.typingSound();
+    }
+    @FXML protected void choice1(){
+        Sound.clickButton();
+    }
+    @FXML protected void choice2(){
+        Sound.clickButton();
     }
 
     public void setUp(HashMap create){
