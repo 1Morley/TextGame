@@ -35,12 +35,6 @@ public class Sound {
 
         pauseTransition.playFromStart();
     }
-
-    private static void stopTypingSound() {
-        if (typingMediaPlayer != null && typingMediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
-            typingMediaPlayer.stop();
-        }
-    }
     public static void clickButton() {
         playSound("buttonSd.mp3");
     }
@@ -65,6 +59,11 @@ public class Sound {
     public static void stopLoopingMusic() {
         if (mediaPlayer != null) {
             mediaPlayer.stop();
+        }
+    }
+    private static void stopTypingSound() {
+        if (typingMediaPlayer != null && typingMediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
+            typingMediaPlayer.stop();
         }
     }
 }
