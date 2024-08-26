@@ -57,6 +57,10 @@ public class GuiController {
         setUp(new LoadRoom().basement());
     }
 
+    @FXML protected void onTyping(){
+        Sound.typingSound();
+    }
+
     public void setUp(HashMap create){
         roomName.setText("Current Room: " + (String) create.get("Name"));
         description.setText((String) create.get("Description"));
@@ -77,6 +81,8 @@ public class GuiController {
     public void showDescription(){
         description.setVisible(true);
     }
+
+
 
 }
 
