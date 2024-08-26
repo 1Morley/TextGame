@@ -1,23 +1,9 @@
 package com.example.textgame.controller;
 
-
-import com.example.textgame.LoadData;
 import com.example.textgame.LoadRoom;
 import com.example.textgame.controller.Design.Sound;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.util.Duration;
-
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 
 
@@ -37,8 +23,9 @@ public class GuiController {
     @FXML
     private void initialize() {
         setUp(new LoadRoom().frontDoor());
-//        HideText();
-//        showDescription();
+
+        //HideText();
+        //showDescription();
     }
 
     @FXML
