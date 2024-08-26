@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
 
@@ -31,6 +32,7 @@ import java.util.HashMap;
 public class GuiController {
     @FXML
     Label Entry1, Entry2, Entry3, description, roomName;
+
     HashMap hashMap = new HashMap();
     @FXML
     private void initialize() {
@@ -38,7 +40,6 @@ public class GuiController {
 //        HideText();
 //        showDescription();
     }
-
 
     @FXML
     private void moveUp(){
@@ -72,5 +73,6 @@ public class GuiController {
     public void showDescription(){
         description.setVisible(true);
     }
+
 }
 
