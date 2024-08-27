@@ -4,40 +4,38 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textgame.controller.GuiController">
+<AnchorPane fx:id="rootPane" prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textgame.controller.GuiController">
    <children>
-      <ImageView accessibleRole="PARENT" fitHeight="530.0" fitWidth="788.0" layoutX="8.0" layoutY="36.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="36.0">
+      <ImageView accessibleRole="PARENT" fitHeight="807.0" fitWidth="1200.0" layoutX="8.0" layoutY="36.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="36.0">
          <image>
             <Image url="@Openbookbig_resized.png" />
          </image>
       </ImageView>
 
-      <TextField layoutX="123.0" layoutY="508.0" onKeyTyped="#onTyping" prefHeight="25.0" prefWidth="237.0" promptText="commands.." style="-fx-font-family: monospaced;" />
-      <ImageView fitHeight="60.0" fitWidth="70.0" layoutX="608.0" layoutY="478.0" onMouseClicked="#moveAhead" preserveRatio="true">
-         <image>
-            <Image url="@mainFloorButton.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="60.0" fitWidth="70.0" layoutX="546.0" layoutY="478.0" onMouseClicked="#moveDown" preserveRatio="true">
-         <image>
-            <Image url="@basmentBtn.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="60.0" fitWidth="70.0" layoutX="484.0" layoutY="478.0" onMouseClicked="#moveUp" preserveRatio="true">
-         <image>
-            <Image url="@upstairsBtn.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="roomName" layoutX="181.0" layoutY="143.0" prefHeight="15.0" prefWidth="61.0" style="-fx-font-family: Monospaced;" text="room" />
-      <Label fx:id="description" layoutX="166.0" layoutY="169.0" prefHeight="168.0" prefWidth="174.0" style="-fx-font-family: Monospaced;" text="description" />
-      <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="445.0" layoutY="90.0" onMouseClicked="#choice1" pickOnBounds="true" preserveRatio="true">
+      <TextField layoutX="242.0" layoutY="723.0" onKeyTyped="#onTyping" prefHeight="25.0" prefWidth="237.0" promptText="commands.." style="-fx-font-family: monospaced;" />
+      <Label fx:id="roomName" layoutX="310.0" layoutY="69.0" prefHeight="15.0" prefWidth="61.0" style="-fx-font-family: Monospaced;" text="room" />
+      <ScrollPane hbarPolicy="NEVER" layoutX="166.0" layoutY="121.0" pickOnBounds="false" prefHeight="580.0" prefWidth="412.0" style="-fx-background: transparent; -fx-border-color: transparent;" vbarPolicy="ALWAYS">
+         <content>
+            <Label fx:id="description" prefWidth="400.0" style="-fx-font-family: Monospaced; -fx-text-fill: black;" text="description" wrapText="true" />
+         </content>
+      </ScrollPane>
+
+
+
+
+      <ImageView fitHeight="288.0" fitWidth="288.0" layoutX="710.0" layoutY="77.0" onMouseClicked="#choice1" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@button_choice1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="521.0" layoutY="90.0" onMouseClicked="#choice2" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="288.0" fitWidth="288.0" layoutX="710.0" layoutY="413.0" onMouseClicked="#choice2" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@button_choice2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="101.0" fitWidth="55.0" layoutX="523.0" layoutY="711.0" onMouseClicked="#stopTxtAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@stopbtn.png" />
          </image>
       </ImageView>
 
