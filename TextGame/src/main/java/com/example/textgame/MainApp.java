@@ -33,7 +33,7 @@ public class MainApp extends Application {
         });
         stage.show();
         GuiController controller = fxmlLoader.getController();
-        controller.testing();
+        controller.testingDescription();
     }
 
     public static void main(String[] args) {
