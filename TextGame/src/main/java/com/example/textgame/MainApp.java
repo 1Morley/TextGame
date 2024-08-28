@@ -22,7 +22,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("bookui.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        Scene scene = new Scene(fxmlLoader.load(), 1200, 900);
         stage.setTitle("Text Game");
         stage.setScene(scene);
         Sound.playBackgroundMusic();
@@ -32,6 +32,8 @@ public class MainApp extends Application {
             System.exit(0);
         });
         stage.show();
+        GuiController controller = fxmlLoader.getController();
+        controller.testingDescription();
     }
 
     public static void main(String[] args) {
