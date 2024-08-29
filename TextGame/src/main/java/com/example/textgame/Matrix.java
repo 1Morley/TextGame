@@ -108,6 +108,47 @@ public class Matrix {
 
         return storyConnections;
     }
+    public String getFileNameForSegment(int segmentIndex) {
+        String path = "Story/Story/";
+        switch(segmentIndex) {
+            case 0: return path + "Intro-Question1.txt";
+            case 1: return path + "TowardHouse-Question2.txt";
+            case 2: return path + "TowardForest.txt";
+            case 3: return path + "OpenDoor-Question3.txt";
+            case 4: return path + "Knock-Question4.txt";
+            case 5: return path + "Hide.txt";
+            case 6: return path + "RunToStairs.txt";
+            case 7: return path + "StankFace-Ending2.txt";
+            case 8: return path + "Smile-Question5.txt";
+            case 9: return path + "BadFeeling-Ending3.txt";
+            case 10: return path + "StayHopeful.txt";
+            case 11: return path + "LivingRoom-Question8.txt";
+            case 12: return path + "Closet-Question10.txt";
+            case 13: return path + "UseFood-Question11.txt";
+            case 14: return path + "MasterBedroom-Question14.txt";
+            case 15: return path + "Master-Question15.txt";
+            case 16: return path + "Bathroom-Question18.txt";
+            case 17: return path + "LayOnBed-Ending9.txt";
+            case 18: return path + "ExamineNightstand-Question16.txt";
+            case 19: return path + "PlayDead-Ending12.txt";
+            case 20: return path + "FindWeapon-Question17.txt";
+            case 21: return path + "Scared-Ending10.txt";
+            case 22: return path + "Brave-Ending11.txt";
+            case 23: return path + "Toilet-Ending14.txt";
+            case 24: return path + "StayInTheBathroom-Ending13.txt";
+            case 25: return path + "TalkToThing.txt";
+            case 26: return path + "Surroundings-Question7.txt";
+            case 27: return path + "Slow-Ending6.txt";
+            case 28: return path + "ExamineKey-Question12.txt";
+            case 29: return path + "ExamineSink-Question19.txt";
+            case 30: return path + "ExamineThing.txt";
+            case 31: return path + "Fast-Ending5.txt";
+            case 32: return path + "HideInCloset-Ending8.txt";
+            case 33: return path + "HideUnderBed-Ending7.txt";
+            case 34: return path + "HideUnderBed-Ending7.txt";
+            default: return "Unknown segment";
+        }
+    }
 
     public String[] getStorySegments() {
         return storySegments;

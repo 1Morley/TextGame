@@ -53,4 +53,5 @@ public class TextManipulation {
         }
         label.setText(fullText);
     }
+
 }

@@ -3,7 +3,6 @@ module com.example.textgame {
     requires javafx.fxml;
     requires javafx.media;
 
-
     opens com.example.textgame to javafx.fxml;
     opens com.example.textgame.controller to javafx.fxml;
     opens com.example.textgame.controller.Design to javafx.fxml;
