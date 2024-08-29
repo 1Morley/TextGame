@@ -2,6 +2,7 @@ package com.example.textgame.controller;
 
 import com.example.textgame.Matrix;
 import com.example.textgame.controller.Design.EndingStage;
+import com.example.textgame.controller.Design.Sound;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -39,12 +40,14 @@ public class GuiController {
     }
     @FXML
     protected void choice1() {
+        stopTxtAnimation();
         int nextSegment = getNextSegment(currentSegment,1);
         loadStorySegment(nextSegment);
     }
 
     @FXML
     protected void choice2() {
+        stopTxtAnimation();
         int nextSegment = getNextSegment(currentSegment,2);
         loadStorySegment(nextSegment);
     }
@@ -63,20 +66,22 @@ public class GuiController {
             currentSegment = segmentIndex;
            testingDescription(storySegments[segmentIndex]);
         } else {
-            hasTheGameEnded(segmentIndex);
             storyTextArea.setText("End of story or invalid path.");
         }
     }
+
     private void hasTheGameEnded(int segmentIndex) {
         String fileName = new Matrix().getFileNameForSegment(segmentIndex);
         System.out.println(fileName);
-        if (fileName.matches("(?i).*ending.*")) {
+        if (fileName.matches("(?i).*ending.*") || fileName.equalsIgnoreCase("Story/Story/TowardForest.txt")) {
             String endingDescription = storySegments[segmentIndex];
                     endingGame(endingDescription);
         }
+
     }
 
     private void endingGame(String endingDescription) {
+        stopTxtAnimation();
         Scene scene;
         Stage stage = (Stage) description.getScene().getWindow();
         if (stage == null) {
@@ -84,7 +89,7 @@ public class GuiController {
             return;
         }
 
-        FXMLLoader fxmlLoader = null;
+        FXMLLoader fxmlLoader;
         try {
             fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/textgame/End.fxml"));
             Parent root = fxmlLoader.load();

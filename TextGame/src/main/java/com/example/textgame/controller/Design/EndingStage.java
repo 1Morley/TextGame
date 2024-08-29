@@ -10,6 +10,9 @@ public class EndingStage {
 
 
     public void endingScript(String script) {
-        TextManipulation.typeText(script, endingDescription);
+        String endingScript = TextManipulation.wrapText(script);
+        Sound.mute();
+        this.endingDescription.setText(endingScript);
+        System.out.println(endingDescription.getText());
     }
 }

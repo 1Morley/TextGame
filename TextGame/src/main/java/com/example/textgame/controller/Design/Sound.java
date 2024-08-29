@@ -10,18 +10,24 @@ import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Sound {
 
     private static MediaPlayer mediaPlayer;
     private static MediaPlayer typingMediaPlayer;
     private static PauseTransition pauseTransition;
+    private static boolean isMuted = false;
 
     public static void typingSound() {
         if (typingMediaPlayer == null) {
             URL resource = Sound.class.getResource("/com/example/textgame/typing.mp3");
             Media sound = new Media(resource.toString());
             typingMediaPlayer = new MediaPlayer(sound);
+        }
+        if (isMuted) {
+            typingMediaPlayer.setVolume(0);
         }
 
         if (pauseTransition == null) {
@@ -66,4 +72,24 @@ public class Sound {
             typingMediaPlayer.stop();
         }
     }
+    public static void stopAllSounds() {
+        if (mediaPlayer != null && mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
+            mediaPlayer.stop();
+        }
+
+        if (typingMediaPlayer != null && typingMediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
+            typingMediaPlayer.stop();
+        }
+
+        if (pauseTransition != null) {
+            pauseTransition.stop();
+        }
+    }
+    public static void mute() {
+        isMuted = true;
+        if (mediaPlayer != null) {
+            mediaPlayer.setVolume(0);
+        }
+    }
+
 }
