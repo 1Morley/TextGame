@@ -32,8 +32,7 @@ public class MainApp extends Application {
             System.exit(0);
         });
         stage.show();
-        GuiController controller = fxmlLoader.getController();
-        controller.testingDescription();
+
     }
 
     public static void main(String[] args) {
