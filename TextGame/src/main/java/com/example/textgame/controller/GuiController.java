@@ -1,55 +1,61 @@
 package com.example.textgame.controller;
 
-import com.example.textgame.LoadRoom;
-import com.example.textgame.controller.Design.Sound;
+import com.example.textgame.Matrix;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-
-import java.util.HashMap;
-
-
-/**
- * @author cwatson
- * @createdOn 8/7/2024 at 6:33 PM
- * @projectName TextGame
- * @packageName PACKAGE_NAME;
- */
-
+import javafx.scene.control.TextArea;
 
 public class GuiController {
     @FXML
-    Label Entry1, Entry2, Entry3, description, roomName;
+    Label description, roomName;
 
-    //when you want to pass text through the description, you can use TextManipulation
+    @FXML
+    TextArea storyTextArea;
+
+    private String[] storySegments;
+    private int[][] storyConnections;
+    private int currentSegment = 0;
 
     @FXML
     private void initialize() {
-        setUp(new LoadRoom().frontDoor());
+        Matrix matrix = new Matrix();
+        storyConnections = matrix.connection();
+        storySegments = matrix.getStorySegments();
+        loadStorySegment(currentSegment);
+    }
+    @FXML public void testingDescription(String story){
+        TextManipulation.typeText(story, description);
     }
 
-    public void setUp(HashMap create){
-        roomName.setText("Current Room: " + (String) create.get("Name"));
-        description.setText((String) create.get("Description"));
-    }
-
-
-    //Button Controls
-
-    @FXML public void testingDescription(){
-        TextManipulation.typeText("Welcome to the Text Game! If you'd like to skip the texting animation just press the red x button", description);
-    }
     @FXML public void stopTxtAnimation(){
         TextManipulation.stopTypingAndShowFullText(description);
     }
-    @FXML protected void onTyping(){
-        Sound.typingSound();
-    }
-    @FXML protected void choice1(){
-        Sound.clickButton();
-    }
-    @FXML protected void choice2(){
-        Sound.clickButton();
+    @FXML
+    protected void choice1() {
+        int nextSegment = getNextSegment(currentSegment,1);
+        loadStorySegment(nextSegment);
     }
 
+    @FXML
+    protected void choice2() {
+        int nextSegment = getNextSegment(currentSegment,2);
+        loadStorySegment(nextSegment);
+    }
+
+    private int getNextSegment(int currentSegment, int choose) {
+        for (int i = 0; i < storyConnections[currentSegment].length; i++) {
+            if (storyConnections[currentSegment][i] == choose) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    private void loadStorySegment(int segmentIndex) {
+        if (segmentIndex >= 0 && segmentIndex < storySegments.length) {
+            currentSegment = segmentIndex;
+           testingDescription(storySegments[segmentIndex]);
+        } else {
+            storyTextArea.setText("End of story or invalid path.");
+        }
+    }
 }
-
