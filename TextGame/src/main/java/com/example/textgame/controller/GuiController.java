@@ -1,10 +1,16 @@
 package com.example.textgame.controller;
 
 import com.example.textgame.LoadRoom;
+import com.example.textgame.controller.Design.EndingStage;
 import com.example.textgame.controller.Design.Sound;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 
@@ -17,6 +23,7 @@ import java.util.HashMap;
 
 
 public class GuiController {
+    private static Stage stage;
     @FXML
     Label Entry1, Entry2, Entry3, description, roomName;
 
@@ -70,9 +77,34 @@ public class GuiController {
         description.setVisible(true);
     }
 
+    public Label getDescriptionLabel(){
+        return description;
+    }
+
+    private void endingGame(String endingText) {
+        Scene scene;
+        Stage stage = (Stage) description.getScene().getWindow();
+        if (stage == null) {
+            System.out.println("Stage is null.");
+            return;
+        }
+        FXMLLoader fxmlLoader = null;
+        try {
+            fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/textgame/End.fxml"));
+            Parent root = fxmlLoader.load();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
+        EndingStage end = fxmlLoader.getController();
+        end.endingScript(endingText);
+    }
+
 
     //Button Controls
-
     @FXML public void testingDescription(){
         TextManipulation.typeText("Welcome to the Text Game! If you'd like to skip the texting animation just press the red x button", description);
     }
@@ -88,6 +120,7 @@ public class GuiController {
     @FXML protected void choice2(){
         Sound.clickButton();
     }
+
 
 }
 
