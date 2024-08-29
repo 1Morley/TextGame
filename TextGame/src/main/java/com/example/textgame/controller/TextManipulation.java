@@ -11,8 +11,6 @@ public class TextManipulation {
     private static String fullText;
 
     public static String wrapText(String text) {
-        //https://stackoverflow.com/questions/47342679/how-to-fill-text-vertically-in-javafx reference to what I was trying
-        //to do if you can get it to work the right way that would be great
         StringBuilder wrappedText = new StringBuilder();
         int lineLength = 0;
 

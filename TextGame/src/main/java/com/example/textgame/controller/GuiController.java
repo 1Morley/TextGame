@@ -2,7 +2,6 @@ package com.example.textgame.controller;
 
 import com.example.textgame.Matrix;
 import com.example.textgame.controller.Design.EndingStage;
-import com.example.textgame.controller.Design.Sound;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
