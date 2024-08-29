@@ -22,52 +22,14 @@ public class GuiController {
 
     //when you want to pass text through the description, you can use TextManipulation
 
-    HashMap hashMap = new HashMap();
     @FXML
     private void initialize() {
         setUp(new LoadRoom().frontDoor());
-        //HideText();
-        //showDescription();
-    }
-
-    @FXML
-    private void moveUp(){
-        //UpstairsBtn
-        Sound.clickButton();
-        setUp(new LoadRoom().upstairs());
-    }
-    @FXML
-    private void moveAhead(){
-        //moveAheadBtn
-        Sound.clickButton();
-        setUp(new LoadRoom().mainFloor());
-    }
-    @FXML
-    private void moveDown(){
-        //BasementBtn
-        Sound.clickButton();
-        setUp(new LoadRoom().basement());
     }
 
     public void setUp(HashMap create){
         roomName.setText("Current Room: " + (String) create.get("Name"));
         description.setText((String) create.get("Description"));
-    }
-    public void HideText(){
-        Entry1.setVisible(false);
-        Entry2.setVisible(false);
-        Entry3.setVisible(false);
-    }
-    public void ShowText(){
-        Entry1.setVisible(true);
-        Entry2.setVisible(true);
-        Entry3.setVisible(true);
-    }
-    public void HideDescription(){
-        description.setVisible(false);
-    }
-    public void showDescription(){
-        description.setVisible(true);
     }
 
 
