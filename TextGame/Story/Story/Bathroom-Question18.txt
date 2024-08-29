@@ -1,0 +1,3 @@
+You open the door and enter the bathroom. A bathtub is in front of you, obscured behind a shower curtain. You hear something wet shifting behind the screen, accompanied by the occasional wave of dark liquid spilling over the side and soaking into the bathmat and staining the wall. On the left is a medicine cabinet hung above the sink, although you are finding it difficult to focus on your reflection in the hazy glass. The flickering light of the candle is not helping. Finally, hidden between the tub and sink is a toilet, which looks completely normal, and the stress of the situation is making you feel an urgent need to use it.
+
+Examine bathtub OR use the toilet?
