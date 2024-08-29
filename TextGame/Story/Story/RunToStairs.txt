@@ -1,0 +1,5 @@
+You decide to trust your instincts and head towards a nearby stairwell. As you dash up the stairs, you glance back and see that the figure appears to grunt in frustration, unable to follow you up the stairs. Reaching the platform on the next level, you let out a deep sigh of relief—at least you are safe for now. The problem is the house is still pitch black. All you can make out in front of you is a small table in the hallway. 
+
+ You feel around the table and find a flashlight,but it does not turn on. Great—now you have a broken flashlight. As you continue to search, you come across a pack of batteries. You dump out the box and find four batteries inside. You pocket the rest of the batteries and prepare to explore further. *Add to inventory*/
+
+/As you click on the flashlight, /you are greeted with /new scenery....
