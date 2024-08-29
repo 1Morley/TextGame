@@ -11,9 +11,9 @@
                 <Image url="@theend.png" />
             </image>
         </ImageView>
-        <ScrollPane hbarPolicy="NEVER" layoutX="300.0" layoutY="300.0" pickOnBounds="false" prefHeight="580.0" prefWidth="600.0" style="-fx-background: black; -fx-border-color: black;" vbarPolicy="ALWAYS">
+        <ScrollPane hbarPolicy="NEVER" layoutX="300.0" layoutY="300.0" pickOnBounds="true" prefHeight="580.0" prefWidth="600.0" style="-fx-background: black; -fx-border-color: black;" vbarPolicy="ALWAYS">
             <content>
-                <Label fx:id="endingDescription" prefWidth="580.0" style="-fx-font-family: Monospaced; -fx-text-fill: white; -fx-background-color: black;" text="I AMMMMM WORKING" />
+                <Label fx:id="endingDescription" prefWidth="580.0" style="-fx-font-family: Monospaced; -fx-text-fill: white ; -fx-background-color: black;" text=" " wrapText="true" />
             </content>
         </ScrollPane>
     </children>

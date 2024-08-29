@@ -3,6 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane fx:id="rootPane" prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textgame.controller.GuiController">
    <children>
@@ -11,8 +12,11 @@
             <Image url="@Openbookbig_resized.png" />
          </image>
       </ImageView>
-      <Label fx:id="roomName" layoutX="310.0" layoutY="69.0" prefHeight="15.0" prefWidth="61.0" style="-fx-font-family: Monospaced;" text="room" />
-      <ScrollPane hbarPolicy="NEVER" layoutX="166.0" layoutY="121.0" pickOnBounds="false" prefHeight="580.0" prefWidth="412.0" style="-fx-background: transparent; -fx-border-color: transparent;" vbarPolicy="ALWAYS">
+      <Label fx:id="roomName" layoutX="205.0" layoutY="77.0" prefHeight="46.0" prefWidth="353.0" style="-fx-font-family: Monospaced;" text="THE FORSAKEN">
+         <font>
+            <Font size="38.0" />
+         </font></Label>
+      <ScrollPane hbarPolicy="NEVER" layoutX="176.0" layoutY="160.0" pickOnBounds="false" prefHeight="580.0" prefWidth="412.0" style="-fx-background: transparent; -fx-border-color: transparent;" vbarPolicy="ALWAYS">
          <content>
             <Label fx:id="description" prefWidth="400.0" style="-fx-font-family: Monospaced; -fx-text-fill: black;" text="description" wrapText="true" />
          </content>
@@ -31,11 +35,16 @@
             <Image url="@button_choice2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="101.0" fitWidth="55.0" layoutX="523.0" layoutY="711.0" onMouseClicked="#stopTxtAnimation" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="101.0" fitWidth="55.0" layoutX="533.0" layoutY="745.0" onMouseClicked="#stopTxtAnimation" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@stopbtn.png" />
          </image>
       </ImageView>
+      <Label layoutX="231.0" layoutY="123.0" style="-fx-font-family: monospaced;" text="RESIDENCE">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
 
    </children>
 </AnchorPane>

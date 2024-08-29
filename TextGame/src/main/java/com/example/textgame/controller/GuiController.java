@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class GuiController {
     @FXML
-    Label description, roomName;
+    Label description;
 
     @FXML
     TextArea storyTextArea;
